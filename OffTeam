@@ -1,0 +1,236 @@
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-3-230 ~]$ sudo su-
+sudo: su-: command not found
+[ec2-user@ip-172-31-3-230 ~]$ sudo su -
+[root@ip-172-31-3-230 ~]# 
+[root@ip-172-31-3-230 ~]# yum update -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+amzn2-core                                                                                                                             | 3.7 kB  00:00:00     
+No packages marked for update
+[root@ip-172-31-3-230 ~]# yum install git -y
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Resolving Dependencies
+--> Running transaction check
+---> Package git.x86_64 0:2.38.1-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl-Git = 2.38.1-1.amzn2.0.1 for package: git-2.38.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core-doc = 2.38.1-1.amzn2.0.1 for package: git-2.38.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: git-core = 2.38.1-1.amzn2.0.1 for package: git-2.38.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Term::ReadKey) for package: git-2.38.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Git::I18N) for package: git-2.38.1-1.amzn2.0.1.x86_64
+--> Processing Dependency: perl(Git) for package: git-2.38.1-1.amzn2.0.1.x86_64
+--> Running transaction check
+---> Package git-core.x86_64 0:2.38.1-1.amzn2.0.1 will be installed
+---> Package git-core-doc.noarch 0:2.38.1-1.amzn2.0.1 will be installed
+---> Package perl-Git.noarch 0:2.38.1-1.amzn2.0.1 will be installed
+--> Processing Dependency: perl(Error) for package: perl-Git-2.38.1-1.amzn2.0.1.noarch
+---> Package perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2 will be installed
+--> Running transaction check
+---> Package perl-Error.noarch 1:0.17020-2.amzn2 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==============================================================================================================================================================
+ Package                                  Arch                           Version                                     Repository                          Size
+==============================================================================================================================================================
+Installing:
+ git                                      x86_64                         2.38.1-1.amzn2.0.1                          amzn2-core                          64 k
+Installing for dependencies:
+ git-core                                 x86_64                         2.38.1-1.amzn2.0.1                          amzn2-core                         7.4 M
+ git-core-doc                             noarch                         2.38.1-1.amzn2.0.1                          amzn2-core                         2.9 M
+ perl-Error                               noarch                         1:0.17020-2.amzn2                           amzn2-core                          32 k
+ perl-Git                                 noarch                         2.38.1-1.amzn2.0.1                          amzn2-core                          40 k
+ perl-TermReadKey                         x86_64                         2.30-20.amzn2.0.2                           amzn2-core                          31 k
+
+Transaction Summary
+==============================================================================================================================================================
+Install  1 Package (+5 Dependent packages)
+
+Total download size: 11 M
+Installed size: 43 M
+Downloading packages:
+(1/6): git-2.38.1-1.amzn2.0.1.x86_64.rpm                                                                                               |  64 kB  00:00:00     
+(2/6): git-core-doc-2.38.1-1.amzn2.0.1.noarch.rpm                                                                                      | 2.9 MB  00:00:00     
+(3/6): perl-Error-0.17020-2.amzn2.noarch.rpm                                                                                           |  32 kB  00:00:00     
+(4/6): perl-Git-2.38.1-1.amzn2.0.1.noarch.rpm                                                                                          |  40 kB  00:00:00     
+(5/6): git-core-2.38.1-1.amzn2.0.1.x86_64.rpm                                                                                          | 7.4 MB  00:00:00     
+(6/6): perl-TermReadKey-2.30-20.amzn2.0.2.x86_64.rpm                                                                                   |  31 kB  00:00:00     
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                          37 MB/s |  11 MB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : git-core-2.38.1-1.amzn2.0.1.x86_64                                                                                                         1/6 
+  Installing : git-core-doc-2.38.1-1.amzn2.0.1.noarch                                                                                                     2/6 
+  Installing : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                                        3/6 
+  Installing : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                                                                                                  4/6 
+  Installing : perl-Git-2.38.1-1.amzn2.0.1.noarch                                                                                                         5/6 
+  Installing : git-2.38.1-1.amzn2.0.1.x86_64                                                                                                              6/6 
+  Verifying  : perl-TermReadKey-2.30-20.amzn2.0.2.x86_64                                                                                                  1/6 
+  Verifying  : git-core-doc-2.38.1-1.amzn2.0.1.noarch                                                                                                     2/6 
+  Verifying  : git-2.38.1-1.amzn2.0.1.x86_64                                                                                                              3/6 
+  Verifying  : git-core-2.38.1-1.amzn2.0.1.x86_64                                                                                                         4/6 
+  Verifying  : 1:perl-Error-0.17020-2.amzn2.noarch                                                                                                        5/6 
+  Verifying  : perl-Git-2.38.1-1.amzn2.0.1.noarch                                                                                                         6/6 
+
+Installed:
+  git.x86_64 0:2.38.1-1.amzn2.0.1                                                                                                                             
+
+Dependency Installed:
+  git-core.x86_64 0:2.38.1-1.amzn2.0.1              git-core-doc.noarch 0:2.38.1-1.amzn2.0.1                 perl-Error.noarch 1:0.17020-2.amzn2             
+  perl-Git.noarch 0:2.38.1-1.amzn2.0.1              perl-TermReadKey.x86_64 0:2.30-20.amzn2.0.2             
+
+Complete!
+[root@ip-172-31-3-230 ~]# git --version
+git version 2.38.1
+[root@ip-172-31-3-230 ~]# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:w0C324cOwGeKrUpf+0bf94oPR2NgcliavasZxzp/Sao root@ip-172-31-3-230.ec2.internal
+The key's randomart image is:
++---[RSA 2048]----+
+|      . .   .    |
+|     o . . *     |
+|      + + = =    |
+|     o B o = o   |
+|    . o S o o +  |
+|     .  .+ o +.. |
+|  . . .. .o.=o.. |
+| . o . .. o*o++  |
+|  . . .o. E+o+oo.|
++----[SHA256]-----+
+[root@ip-172-31-3-230 ~]# 
+[root@ip-172-31-3-230 ~]# 
+[root@ip-172-31-3-230 ~]# cat /root/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDLz8oLJpB/plzwUJ0G4wMWjvjyoRl2rFha8MqusyW01TqbOeYx1z3lbSZZua/NvyQffCY/qMq8HJKANgVInXnVQ1VDrBXBBUQMNkDI+oN/mqSCv7PMC75Fxl+5XvA2GFtpFTGu/XF/Au+Chs4u2LJb5USw339enyHkEuSHrYgNZHuradlu+6343z42adrSraB3LunzDEZyv1zDV0ouBfcKCeiyBFv7gR0ui7lbh/JP8ik2RiYG1ReFB2g+45jM0ugI4Jb88i7ng0itiBnm8ufaeG4deAXVPaedhKg8y3f6qXVSqH4+6JShs3Z6jlvlTVxE7GHLtKaI+Ju0otCwlaj root@ip-172-31-3-230.ec2.internal
+[root@ip-172-31-3-230 ~]# 
+[root@ip-172-31-3-230 ~]# 
+[root@ip-172-31-3-230 ~]# git config --global user.name "saravanaezhumalai"
+[root@ip-172-31-3-230 ~]# git config --global user.email "saravanaezhumalai@gmail.com"
+[root@ip-172-31-3-230 ~]# ll
+total 0
+[root@ip-172-31-3-230 ~]# 
+[root@ip-172-31-3-230 ~]# mkir Off
+-bash: mkir: command not found
+[root@ip-172-31-3-230 ~]# mkdir Off
+[root@ip-172-31-3-230 ~]# ll
+total 0
+drwxr-xr-x 2 root root 6 Jan  9 13:04 Off
+[root@ip-172-31-3-230 ~]# cd Off/
+[root@ip-172-31-3-230 Off]# ll
+total 0
+[root@ip-172-31-3-230 Off]# pwd
+/root/Off
+[root@ip-172-31-3-230 Off]# gi
+gio                  gio-querymodules-64  git                  git-receive-pack     git-shell            git-upload-archive   git-upload-pack
+[root@ip-172-31-3-230 Off]# git clone git@github.com:saravanaezhumalai/Off.git
+Cloning into 'Off'...
+The authenticity of host 'github.com (140.82.113.4)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+ECDSA key fingerprint is MD5:7b:99:81:1e:4c:91:a5:0d:5a:2e:2e:80:13:3f:24:ca.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,140.82.113.4' (ECDSA) to the list of known hosts.
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+[root@ip-172-31-3-230 Off]# ll
+total 0
+drwxr-xr-x 3 root root 35 Jan  9 13:06 Off
+[root@ip-172-31-3-230 Off]# cd Off/
+[root@ip-172-31-3-230 Off]# ll
+total 4
+-rw-r--r-- 1 root root 14 Jan  9 13:06 README.md
+[root@ip-172-31-3-230 Off]# pwd
+/root/Off/Off
+[root@ip-172-31-3-230 Off]# touch OffTeam
+[root@ip-172-31-3-230 Off]# git init 
+Reinitialized existing Git repository in /root/Off/Off/.git/
+[root@ip-172-31-3-230 Off]# git add .
+[root@ip-172-31-3-230 Off]# git commit -m "CommitOff"
+[main bda941d] CommitOff
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 OffTeam
+[root@ip-172-31-3-230 Off]# 
+[root@ip-172-31-3-230 Off]# 
+[root@ip-172-31-3-230 Off]# git push 
+Warning: Permanently added the ECDSA host key for IP address '140.82.112.3' to the list of known hosts.
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 275 bytes | 275.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:saravanaezhumalai/Off.git
+   9badfdd..bda941d  main -> main
+[root@ip-172-31-3-230 Off]# git branch 
+* main
+[root@ip-172-31-3-230 Off]# git branch PublicOff1
+[root@ip-172-31-3-230 Off]# ll
+total 4
+-rw-r--r-- 1 root root  0 Jan  9 13:06 OffTeam
+-rw-r--r-- 1 root root 14 Jan  9 13:06 README.md
+[root@ip-172-31-3-230 Off]# git branch 
+  PublicOff1
+* main
+[root@ip-172-31-3-230 Off]# git checkout PublicOff1
+Switched to branch 'PublicOff1'
+[root@ip-172-31-3-230 Off]# git branch 
+* PublicOff1
+  main
+[root@ip-172-31-3-230 Off]# vi PublicOff1
+[root@ip-172-31-3-230 Off]# cat PublicOff1 
+Welcome to Git
+[root@ip-172-31-3-230 Off]# git init 
+Reinitialized existing Git repository in /root/Off/Off/.git/
+[root@ip-172-31-3-230 Off]# git add .
+[root@ip-172-31-3-230 Off]# git commit -m "CommitOff2"
+[PublicOff1 d194658] CommitOff2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 PublicOff1
+[root@ip-172-31-3-230 Off]# git push origin PublicOff1
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 323 bytes | 323.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'PublicOff1' on GitHub by visiting:
+remote:      https://github.com/saravanaezhumalai/Off/pull/new/PublicOff1
+remote: 
+To github.com:saravanaezhumalai/Off.git
+ * [new branch]      PublicOff1 -> PublicOff1
+[root@ip-172-31-3-230 Off]# git branch
+* PublicOff1
+  main
+[root@ip-172-31-3-230 Off]# git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+[root@ip-172-31-3-230 Off]# git branch
+  PublicOff1
+* main
+[root@ip-172-31-3-230 Off]# git rebase PublicOff1 main 
+Successfully rebased and updated refs/heads/main.
+[root@ip-172-31-3-230 Off]# git init
+Reinitialized existing Git repository in /root/Off/Off/.git/
+[root@ip-172-31-3-230 Off]# git add .
+[root@ip-172-31-3-230 Off]# git commit -m "rebase1"
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[root@ip-172-31-3-230 Off]# git push origin PublicOff1
+Everything up-to-date
+[root@ip-172-31-3-230 Off]#
