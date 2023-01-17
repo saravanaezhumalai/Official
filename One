@@ -1,0 +1,8 @@
+ cat mysql.log | grep "2022-05-11\|2022-05-16" > 2022-05-16_mysql_log.txt
+ 1517  ll
+ 1518  du -sh *
+ 1519  /usr/local/bin/aws s3 cp /datadisk/mysql/2022-05-16.zip s3://poc-environment-backup/logreq/
+
+ 1520  /usr/local/bin/aws s3 cp /datadisk/mysql/2022-05-10_mysql_log.txt s3://poc-environment-backup/logreq/
+ 1521*
+ 1522  zip -r 2022-05-16.zip 2022-05-16_mysql_log.txt
